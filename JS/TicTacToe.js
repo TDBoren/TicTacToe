@@ -86,7 +86,7 @@ function stopEnabled(btn) {
     btn.style.color = "#fff";
     btn.style.border = "2px solid rgb(204, 0, 0)";
     btn.style.backgroundColor = "rgb(255, 51, 51)";
-    btn.disbaled = false;
+    btn.disabled = false;
 }
 
 // this function styles the game buttons while they are enabled
@@ -413,8 +413,8 @@ function checkWinCon1(info,squareArray) {
 
 // checking for wincon squares 345
 function checkWinCon2(info,squareArray) {
-    var winDetected = "on";
     var winCon2 = [3,4,5];
+    var winDetected = "on";
     // iterate through the growing array during
     // game time searching for the existence of
     // index 0, index 1, and index 2 and once they
@@ -442,8 +442,8 @@ function checkWinCon2(info,squareArray) {
 
 // checking for wincon squares 678
 function checkWinCon3(info,squareArray) {
-    var winDetected = "on";
     var winCon3 = [6,7,8];
+    var winDetected = "on";
     // iterate through the growing array during
     // game time searching for the existence of
     // index 0, index 1, and index 2 and once they
@@ -466,13 +466,13 @@ function checkWinCon3(info,squareArray) {
             winDetected = "win"; // this flag will pass when a win has been detected
         }
     }
-    winner(winDetected, winCon3); // winCon3 is the array of the win combo
+    winner(winDetected,winCon3); // winCon3 is the array of the win combo
 }
 
 // checking for wincon squares 036
 function checkWinCon4(info,squareArray) {
-    var winDetected = "on";
     var winCon4 = [0,3,6];
+    var winDetected = "on";
     // iterate through the growing array during
     // game time searching for the existence of
     // index 0, index 1, and index 2 and once they
@@ -495,7 +495,7 @@ function checkWinCon4(info,squareArray) {
             winDetected = "win"; // this flag will pass when a win has been detected
         }
     }
-    winner(winDetected, winCon4); // winCon4 is the array of the win combo
+    winner(winDetected,winCon4); // winCon4 is the array of the win combo
 }
 
 // checking for wincon squares 147
@@ -524,7 +524,7 @@ function checkWinCon5(info,squareArray) {
             winDetected = "win"; // this flag will pass when a win has been detected
         }
     }
-    winner(winDetected, winCon5); // winCon5 is the array of the win combo
+    winner(winDetected,winCon5); // winCon5 is the array of the win combo
 }
 
 // checking for wincon squares 258
@@ -553,7 +553,7 @@ function checkWinCon6(info,squareArray) {
             winDetected = "win"; // this flag will pass when a win has been deleted
         }
     }
-    winner(winDetected, winCon6); // winCon1 is the array of the win combo
+    winner(winDetected,winCon6); // winCon1 is the array of the win combo
 }
 
 // checking for wincon squares 048
@@ -582,7 +582,7 @@ function checkWinCon7(info,squareArray) {
             winDetected = "win"; // this flag will pass when a win has been detected
         }
     }
-    winner(winDetected, winCon7); // winCon1 is the array of the win combo
+    winner(winDetected,winCon7); // winCon1 is the array of the win combo
 }
 
 // checking for wincon squares 246
@@ -611,7 +611,7 @@ function checkWinCon8(info,squareArray) {
             winDetected = "win"; // this flag will pass when a win has been detected
         }
     }
-    winner(winDetected, winCon8); // winCon8 is the array of the win combo
+    winner(winDetected,winCon8); // winCon8 is the array of the win combo
 }
 
 // ============================================================================================
@@ -836,10 +836,10 @@ function square9Animate() {
 
 //this function will perform the animation for the O avatar.
 function animateO(selected) {
-    selected.style.transform = (selected.style.transform == "translateY(-100%)" || null) ? "translateY(0)" : "translateY(-100%)";
+    selected.style.transform = (selected.style.transform == "translateY(0%)" || null) ? "translateY(0%)" : "translateY(0%)";
 }
 
 // this function will poerform the animation for the X avatar.
 function animateX(selected) {
-    selected.style.transform = (selected.style.transform == "translateY(100%)" || null) ? "translateY(0)" : "translateY(100%)";
+    selected.style.transform = (selected.style.transform == "translateY(-100%)" || null) ? "translateY(0%)" : "translateY(-100%)";
 }
