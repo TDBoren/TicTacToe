@@ -214,7 +214,8 @@ function check(info,square) {
 // square has already been assigned and if it has not, record new square with the assigned avatar
 function recordMoves(square) {
     var proposedMove = square;
-    var boardState = document.getElementById("boardState").innerHTML; // retrieve boardState array
+    var boardState = document.getElementById("boardState").innerHTML;
+    console.log(boardState) // retrieve boardState array
     var info = boardState.split(","); // separate the string by commas to create an array
     verdict = check(info,square); // call function to check if proposed square is already occupied
     return verdict;
@@ -404,7 +405,7 @@ function checkWinCon1(info,squareArray) {
     if (match0Avatar != undefined && match1Avatar != undefined && match2Avatar != undefined) {
         if (match0Avatar == match1Avatar && match0Avatar == match2Avatar) {
             winDetected = "win"; // this flag will pass when a win has been detected
-            winner(windDetected,winCon1);
+            winner(winDetected,winCon1);
             return;
         }
     }
@@ -789,7 +790,7 @@ function square7Animate() {
 function square8Animate() {
     var activePlayer = document.getElementById("showPlayer").innerHTML;
     if (activePlayer != "Game Stopped") { // if game has not yet started prevent avatar placement
-        var square = "8"; // identify the square selected
+        var square = "7"; // identify the square selected
         // check if the proposed square is valid
         var verdict = recordMoves(square);
         if (verdict == undefined) { // if verdict is empty then the square is unoccupied.
@@ -813,7 +814,7 @@ function square8Animate() {
 function square9Animate() {
     var activePlayer = document.getElementById("showPlayer").innerHTML;
     if (activePlayer != "Game Stopped") { // if game has not yet started prevent avatar placement
-        var square = "9"; // identify the square selected
+        var square = "8"; // identify the square selected
         // check if the proposed square is valid
         var verdict = recordMoves(square);
         if (verdict == undefined) { // if verdict is empty then the square is unoccupied.
